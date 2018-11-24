@@ -1,0 +1,86 @@
+<h2 align="center"> Latest Station Readings: </h2>
+
+<table align="center", class="paleBlueRows">
+<thead>
+<tr>
+<th>Date</th>
+<th>Temp (C)</th>
+<th>Humidity</th>
+<th>Rain</th>
+</tr>
+</thead>
+<tfoot>
+
+<tr>
+<th>Date</th>
+<th>Temp (C)</th>
+<th>Humidity</th>
+<th>Rain</th>
+</tr>
+</tfoot>
+<tbody>
+
+
+{% for key, value in dict.iteritems() %}
+   <tr>
+        <td> {{ key }} </th>
+	{% for k in value %}
+		<td> {{ k }} </td>
+	{% endfor %}
+   </tr>
+{% endfor %}
+
+</tbody>
+</table>
+
+<style>
+h2{
+
+  padding: 20px;	
+  color: #173360;
+}
+
+table.paleBlueRows {
+  font-family: "Times New Roman",Times,serif;
+  border: 1px solid #FFFFFF;
+  width: 750px;
+  height: 250px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.paleBlueRows td, table.paleBlueRows th {
+  border: 1px solid #FFFFFF;
+  padding: 3px 2px;
+}
+table.paleBlueRows tbody td {
+  font-size: 13px;
+}
+table.paleBlueRows tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.paleBlueRows thead {
+  background: #0B6FA4;
+  border-bottom: 5px solid #FFFFFF;
+}
+table.paleBlueRows thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+table.paleBlueRows thead th:first-child {
+  border-left: none;
+}
+
+table.paleBlueRows tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #D0E4F5;
+  border-top: 3px solid #444444;
+}
+table.paleBlueRows tfoot td {
+  font-size: 14px;
+}
+</style>
